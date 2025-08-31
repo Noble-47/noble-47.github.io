@@ -1,1 +1,10 @@
+#title: Noble47
+description: A simple site powered by GitHub Pages
+author: Noble47
+theme: minima   # simple, clean Jekyll theme
+
+# Optional settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
 
