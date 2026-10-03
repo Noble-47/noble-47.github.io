@@ -1,0 +1,19 @@
+title: Noble47
+description: Chronicles of an ardent learner
+author: Noble47
+theme: jekyll-theme-midnight
+repository: noble47
+toc: true
+
+defaults:
+  - scope:
+      path: "projects"
+    values:
+      layout: "post"
+
+# Optional settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - Jekyll-toc
+

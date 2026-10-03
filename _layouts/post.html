@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <div class="wrapper">
+
+      <section>
+        <header class="post-header">
+          <div class="topic-tags">
+            {% if page.tags %}
+              {% for tag in page.tags %}
+                <a href="{{ '/projects/' | relative_url }}#{{ tag | slugify }}" class="tag-badge-link">
+                  <span class="tag-badge">{{ tag }}</span>
+                </a>
+              {% endfor %}
+            {% endif %}
+          </div>
+
+          <h1 class="post-title">{{ page.title }}</h1>
+
+          <!--
+          Add category here: e.g. Internship Project
+          -->
+          <!-- Add date here use format YYYY-MM-DD -->
+          {% if page.date %}
+            <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+              {{ page.date | date: "%d-%B-%Y" }}
+            </time>
+          {% endif %}
+          <hr>
+        </header>
+
+        <div class="post-content">
+            {{ content }}
+        </div>
+
+      </section>
+
+    </div>
+  <footer>
+          <span class="credits left">Maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,367 @@
+---
+---
+
+
+// a small { font-size: 11px; color: #666; margin-top: -0.6em; display: block; }
+
+
+@import "{{ site.theme }}";
+
+
+body {color: #fff}
+a { color: #ffff; font-weight: 400; text-decoration: none; }
+a:hover { color: #58a6ff; }
+
+/* Medium-style post title */
+.post-title, 
+.wrapper section h1.post-title {
+  //color:  #ffffff !important;
+  color:  #e8e8e8 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.75rem; /* ~44px on desktop */
+  font-weight: 800; /* Extra bold */
+  line-height: 1.15;
+  letter-spacing: -0.022em; /* Slightly tighter tracking for modern typography */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Style for the right-aligned date string */
+.post-date {
+  color: #e8e8e8; //8b949e; /* Soft gray color matching dark theme */
+  font-size: 0.9rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  white-space: nowrap;
+  margin-left: auto; /* Fallback alignment push */
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+  .post-title, 
+  .wrapper section h1.post-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* Container for topic tags */
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* Medium-style pill badge */
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #242424;
+  color: #b3b3b3;
+  border: 1px solid #383838;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.85rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover state */
+.tag-badge:hover {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  border-color: #555555;
+}
+
+
+/* Project Listing */
+.projects-list .project-title a {
+  // color: inherit; /* Inherit the theme's default link color */
+  // text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Scoped Kramdown TOC Styling */
+ul#markdown-toc {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 1rem 1rem 1rem 2.5rem;
+}
+
+/* Project list item layout */
+.project-item {
+  margin-bottom: 1.5rem;
+}
+
+.project-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.5rem;
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Icon action group */
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-link-icon {
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+  color: #ffffff;
+
+  &:hover {
+    color: #58a6ff;
+    transform: translateY(-2px);
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+/* Filter Bar Container */
+.tag-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Filter Button Pills */
+.filter-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #8b949e;
+  // border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &.active {
+    color: #ffffff;
+    border-color: #58a6ff;
+    font-weight: 600;
+  }
+}
+
+/* Footer container centered layout */
+footer {
+  display: flex;
+  flex-direction: column; /* Stack left/right elements vertically in the center */
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; /* Space between lines */
+  width: 100%;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+/* Base text styling for spans inside footer */
+footer .credits {
+  font-size: 0.85rem;
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* Inline horizontal view on wider screens (Optional) */
+@media (min-width: 640px) {
+  footer {
+    flex-direction: row; /* Single centered line */
+    gap: 1.5rem;
+  }
+}
+
+
+/* Project Tagline Styling */
+/* Project page quote tagline */
+// .projects-tagline {
+  // font-style: italic;
+  // color: #8b949e;
+  // margin: 1rem 0 2rem 0;
+  // padding-left: 1rem;
+  // font-size: 1.05rem;
+  // line-height: 1.6;
+// }
+
+/* Project page quote block */
+.projects-tagline {
+  font-style: italic;
+  color: #8b949e;
+  border-left: 3px solid #58a6ff;
+  margin: 1rem 0 2rem 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+
+  .quote-body {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .quote-author {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #6e7681;
+    border-top: none; /* Prevents inheriting site footer styles */
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+}
+
+
+/* Profile Homepage */
+/* Hero Profile Header */
+.profile-hero {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.profile-bio {
+  font-size: 1.1rem;
+  color: #8b949e;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Social Link Pills */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+  }
+
+  &.highlight {
+    border-color: #58a6ff;
+
+    &:hover {
+      background-color: #58a6ff;
+    }
+  }
+}
+
+/* Home Section Layout */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .see-all-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.section-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2.5rem 0;
+}
+
+/* Navbar Styling */
+/* Navigation Bar */
+.site-nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 1rem 1.25rem;
+  justify-content: flex-start;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #8b949e;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom-color: #58a6ff; /* Midnight theme accent line */
+  }
+}
